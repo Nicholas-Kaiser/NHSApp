@@ -1,0 +1,204 @@
+h1{
+	font-size:45px;
+	color:black;
+}
+
+.TimeSpent-Years-Text{
+	margin-top:4px;
+	width:40px;
+	height:20px;
+}
+
+.Sub-titles{
+	font-size:35px;
+	
+}
+
+label#ActLabels{
+	width:0px;
+}
+
+label {
+	display:inline-block;
+	font-size:20px;
+	text-align:right;
+	margin-right:30px;
+	color:black;
+ }
+ 
+ .PersonalInfo-Labels{
+	width:200px;
+ }
+ 
+input[type=text] {
+	
+	border-color:black;
+	border-width:1px;
+	margin-left:1px;
+ }
+ 
+.clear { 
+	clear: both; 
+	height: 0; 
+	line-height: 0; 
+}
+
+h3{
+	display:inline;
+	color:black;
+}
+
+h5{
+	display:inline;
+}
+
+.actText{
+	margin-top:4px;
+	height:20px;
+	width:100px;
+}
+
+.ActGrades{
+	margin-bottom:8px;
+}
+
+.ActSelectors{
+	width:125px;
+}
+
+.actYear{
+	display:inline-block;
+}
+
+.yearLines{
+	width:10px;
+	margin-right:5px;
+}
+
+.actDivs{
+	display:inline-block;
+}
+
+.TimeSpent-Years-CheckBoxes{
+	margin-top:10px;
+	margin-bottom:1px;
+}
+
+.Awards-Forms{
+	
+	margin-top:5px;
+}
+
+.AwardsText{
+	height:20px;
+	margin-bottom:4px;
+}
+
+.AwardsDivs{
+	
+	display:inline-block;
+}
+
+.AwardLabels{
+	width:50px;
+}
+
+form{
+	margin-top:1px;
+	height:8px;
+	width:125px;
+}
+
+#login
+{
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+ #password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#doLogin
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:250px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#E6E6E6;
+   background-color:grey;
+   font-size:20px;
+}
+
+#signUpform
+{
+   width:500px;
+   height:330px;
+   margin-top:100px;
+   background-color:#585858;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:visable;
+   display:block;
+}
+#signUp
+{
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#confirmpassword
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#dosignUp
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:250px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#E6E6E6;
+   background-color:grey;
+   font-size:20px;
+}
+
+#wrapper{
+	visibility:visible;
+	display:block;
+{
+
+
+
+
+
+
