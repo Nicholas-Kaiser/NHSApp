@@ -10,7 +10,6 @@
 	
 	
 	<script type="text/javascript" src="Scripts.js">
-		
 	</script>
 	<script type="text/javascript" src="doLoginForm.js">
 	</script>
@@ -18,18 +17,19 @@
 		
 		<form id = "SignUpform">
 
-			<form method = "post" action = "" align="center">
+			<form method = "post" action = "" align="center" id="signUpForm">
 				<input type = "text" id = "signUp" placeholder = "Email" name = "uid">
-				<input type = "password" id = "password" name = "upass" placeholder = "password">
+				<input type = "password" id = "signUppassword" name = "upass" placeholder = "password">
 				<input type = "password" id = "confirmpassword" name = "upass" placeholder = "confirm password">
 				<input type = "button" id = "dosignUp" value = "Sign Up" onclick="doSignUp()">
 			</form>
+		</form>
+		<form id="SignupForm">
 			<form method = "post" action = "" align="center">
 				<input type = "text" id = "login" placeholder = "Email" name = "uid">
 				<input type = "password" id = "password" name = "upass" placeholder = "password">
 				<input type = "button" id = "dologin" value = "Login" onclick="doLogin()">
 			</form>
-			
 		</form>
 
 	</center>

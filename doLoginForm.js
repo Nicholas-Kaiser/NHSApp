@@ -2,6 +2,9 @@
 var dataRef = new Firebase('https://nhs-application.firebaseio.com/');
 //stores the data from the Users section of the Firbase servers
 var users = dataRef.child('Users');
+//https://accounts.google.com/ServiceLogin?service=wise&passive=1209600
+//&continue=https://drive.google.com/?tab%3Dwo%26urp%3Dhttps://www.google
+//.com/%23&followup=https://drive.google.com/?tab%3Dwo%26urp%3Dhttps://www.google.com/&ltmpl=drive&emr=1
 
 /*Logs in the user if they have an account
 *and their password and email are correct
@@ -9,9 +12,22 @@ var users = dataRef.child('Users');
 */
 function doLogin() {
 	
-	var email = $('#login').val();
+	var mail = $('#login').val();
 	var pass = $('#password').val();
-	console.log(pass);
+	
+	users.authWithPassword({
+	  email    : mail,
+	  password : pass
+	}, function(error, authData) {
+	  if (error) {
+		console.log("Login Failed!", error);
+	  } else {
+		console.log("Authenticated successfully with payload:", authData);
+	  }
+	});
+	
+	
+	/*console.log(pass);
 	console.log(email);
 	
 	var test = checkConfirmation(email, pass);
@@ -19,7 +35,7 @@ function doLogin() {
 	if (test){
 		console.log("L");
 		finishLogin(email, pass);
-	}
+	}*/
 	
 }
 
@@ -35,10 +51,24 @@ function finishLogin(email, pass){
 */
 function doSignUp() {
 	
-	var email = $('#signUp').val();
+	var mail = $('#signUp').val();
 	var pass = $('#signUppassword').val();
 	var confirmPass = $('#signUpConfirmpassword').val();
-	var test = checkConfirmationSignUp(pass,email,confirmPass);
+	
+	console.log("mail: " + mail + " pass: " + pass);
+	
+	users.createUser({
+	  email    : mail,
+	  password : pass
+	}, function(error, userData) {
+	  if (error) {
+		console.log("Error creating user:", error);
+	  } else {
+		console.log("Successfully created user account with uid:", userData.uid);
+	  }
+	});
+	
+	/*var test = checkConfirmationSignUp(pass,email,confirmPass);
 	if (test){
 		users.child(email).child("password").set(pass);
 		finishLogin(email, pass);
@@ -47,7 +77,7 @@ function doSignUp() {
 		$("#login").val("");
 		$("#login").css({"border-color":"red"});
 		alert("Email does not exist");
-	}
+	}*/
 	
 	
 }
