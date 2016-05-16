@@ -35,7 +35,7 @@ input[type=text] {
 	border-color:black;
 	border-width:1px;
 	margin-left:1px;
- }
+}
  
 .clear { 
 	clear: both; 
@@ -103,94 +103,7 @@ h5{
 	width:50px;
 }
 
-form{
-	margin-top:1px;
-	height:8px;
-	width:125px;
-}
 
-#login
-{
-   width:250px;
-   height:40px;
-   border:2px solid silver;
-   border-radius:3px;
-   padding:5px;
-}
- #password
-{
-   margin-top:5px;
-   width:250px;
-   height:40px;
-   border:2px solid silver;
-   border-radius:3px;
-   padding:5px;
-}
-#doLogin
-{
-   margin-left:-5px;
-   margin-top:10px;
-   width:250px;
-   height:40px;
-   border:none;
-   border-radius:3px;
-   color:#E6E6E6;
-   background-color:grey;
-   font-size:20px;
-}
-
-#signUpform
-{
-   width:500px;
-   height:330px;
-   margin-top:100px;
-   background-color:#585858;
-   border-radius:3px;
-   box-shadow:0px 0px 10px 0px #424242;
-   padding:10px;
-   box-sizing:border-box;
-   font-family:helvetica;
-   visibility:visable;
-   display:block;
-}
-#signUp
-{
-   width:250px;
-   height:40px;
-   border:2px solid silver;
-   border-radius:3px;
-   padding:5px;
-}
-#password
-{
-   margin-top:5px;
-   width:250px;
-   height:40px;
-   border:2px solid silver;
-   border-radius:3px;
-   padding:5px;
-}
-#confirmpassword
-{
-   margin-top:5px;
-   width:250px;
-   height:40px;
-   border:2px solid silver;
-   border-radius:3px;
-   padding:5px;
-}
-#dosignUp
-{
-   margin-left:-5px;
-   margin-top:10px;
-   width:250px;
-   height:40px;
-   border:none;
-   border-radius:3px;
-   color:#E6E6E6;
-   background-color:grey;
-   font-size:20px;
-}
 
 #wrapper{
 	visibility:visible;

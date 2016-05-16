@@ -5,7 +5,8 @@ var AccountsRef;
 var personActivitiesRef;
 var personPersonalInfoRef;
 var personAwardsRef;
-dataRef.onAuth(authDataCallback);
+
+
 
 
 function clickHandler() {
@@ -277,52 +278,9 @@ function uploadAwardsYear(name, line) {
 		var Ref = personAwardsRef.child(name);
 		Ref.child('Year Awarded').set(AwardsYearInfo[line-1]);
 		Ref.child('Sponsor Email').set(AwardsEmailInfo[line-1]);
-	}
-	
+	}	
 }
 
-
-function loginUser(){
-	var id = $('#login').val();
-	var pass = $('#password').val();
-	console.log(id);
-	var authData = dataRef.getAuth();
-	if (authData) {
-	  console.log("User " + authData.uid + " is logged in with " + authData.provider);
-	} else {
-	  console.log("User is logged out");
-	}
-	/*dataRef.createUser({
-		email    : id,
-		password : pass
-		}, function(error) {
-		if (error === null) {
-			console.log("User created successfully");
-		} else {
-			console.log("Error creating user:", error);
-		}
-	});*/
-	
-	
-}
-
-function authHandler(error, authData) {
-	if (error) {
-		console.log("Login Failed!", error);
-	} else {
-		console.log("Authenticated successfully with payload:", authData);
-	}
-}
-
-// Create a callback which logs the current auth state
-function authDataCallback(authData) {
-console.log("1");
-	if (authData) {
-		console.log("User " + authData.uid + " is logged in with " + authData.provider);
-	} else {
-		console.log("User is logged out");
-	}
-}
 
 
 

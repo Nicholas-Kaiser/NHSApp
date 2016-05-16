@@ -1,0 +1,546 @@
+<html>
+<head>
+	<script src = 'https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="Styling.css"/>
+	<link rel="stylesheet" type="text/css" href="FormStyling.css"/>
+	<div align="right">
+		<input type="button" id="LoginButton" onclick="LoginOrOut()" value="Login"/>
+	</div>
+	<h1 id="title" align=center>NHS Application Form</h1><br/><br/><br/>
+	
+</head>
+<body>
+	
+	
+	<script type="text/javascript" src="Scripts.js">
+	</script>
+	<script type="text/javascript" src="doLoginForm.js">
+	</script>
+	<center>
+		
+		
+		<form id = "Registerform">
+
+			<form class="LoginAndRegisterForm">
+				<input type = "text" id = "signUpName" class = "formInput" placeholder = "Full Name"/>
+				<input type = "text" id = "signUpPhone" class = "formInput" placeholder = "Phone Number"/>
+				<input type = "text" id = "signUp" class = "formInput" placeholder = "Email"/><br/>
+				<input type = "password" id = "signUppassword" class = "formInput" placeholder = "password"/>
+				<input type = "button" id = "dosignUp" value = "Sign Up" onclick="doSignUp()"/>
+			</form>
+			
+		</form>
+		<form id="LoginForm">
+			<form class="LoginAndRegisterForm">
+				<input type = "text" id = "login" class = "formInput" placeholder = "Email" name = "uid">
+				<input type = "password" id = "password" class = "formInput" name = "upass" placeholder = "password">
+				<input type = "button" id = "dologin" value = "Login" onclick="doLogin()">
+			</form>
+		</form>
+		
+	
+		<div id="wrapper"  align='center'>
+		
+		
+		
+		
+			<h1 class="Sub-titles">Extra curricular Activities</h1>
+			
+			<div class="ActivitiesDiv" align='center'>
+				<div id="ActName" class='actDivs'>
+					<h3 id="activityName" align="center">Name</h3><br/><br/>
+					<label for="ActNameLine1" class="ActLabels">1:</label>
+						<input type='text' id='ActNameLine1' class="actText"/><br/>
+					<label for="ActNameLine2" class="ActLabels">2:</label>
+						<input type='text' id='ActNameLine2' class="actText"/><br/>
+					<label for="ActNameLine3" class="ActLabels">3:</label>
+						<input type='text' id='ActNameLine3' class="actText"/><br/>
+					<label for="ActNameLine4" class="ActLabels">4:</label>
+						<input type='text' id='ActNameLine4' class="actText"/><br/>
+					<label for="ActNameLine5" class="ActLabels">5:</label>
+						<input type='text' id='ActNameLine5' class="actText"/><br/>
+					<label for="ActNameLine6" class="ActLabels">6:</label>
+						<input type='text' id='ActNameLine6' class="actText"/><br/>
+				</div>
+				<div id="Activity-TimeSpent" align='center' class='actDivs'>
+					<h3>TimeSpent</h3><br/>
+					
+					<div id='Activity-TimeSpent-Year9' style='display:inline-block'>
+					
+						<div id="TimeSpent-Years-9" class='actDivs'>
+							<h4>9th</h4>
+							
+							<input type='checkbox' id='TimeSpent-Years-9Line1' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-9Line2' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-9Line3' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-9Line4' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-9Line5' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-9Line6' class='TimeSpent-Years-CheckBoxes'>
+						</div>
+						<div id="TimeSpent-Text-Year9" class='actDivs'>
+							
+							<input type='text' id="TimeSpent-Text-Year9-Line1" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year9-Line2" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year9-Line3" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year9-Line4" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year9-Line5" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year9-Line6" style='margin-top:4px; width:40px; height:20px'>
+						</div>
+						<div id="TimeSpent-DropDown-Year9" class='actDivs'>
+							
+							<div id='TimeSpent-DropDown-Year9-Line1'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line1' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line1" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year9-Line2'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line2' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line2" class='ActSelectors' >
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year9-Line3'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line3' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line3" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year9-Line4'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line4' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line4" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year9-Line5'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line5' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line5" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year9-Line6'>
+								<form id='TimeSpent-DropDown-Form-Year9-Line6' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year9-Line6" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id='Activity-TimeSpent-Year10' style='display:inline-block'>
+						<div id="TimeSpent-Years-10" class='actDivs'>
+							<h4>10th</h4>
+							
+							<input type='checkbox' id='TimeSpent-Years-10Line1' style='margin-top:0px'></br>
+							<input type='checkbox' id='TimeSpent-Years-10Line2' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-10Line3' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-10Line4' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-10Line5' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-10Line6' class='TimeSpent-Years-CheckBoxes'>
+						</div>
+						<div id="TimeSpent-Text-Year9" class='actDivs'>
+							
+							<input type='text' id="TimeSpent-Text-Year10-Line1" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year10-Line2" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year10-Line3" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year10-Line4" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year10-Line5" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year10-Line6" style='margin-top:4px; width:40px; height:20px'>
+						</div>
+						<div id="TimeSpent-DropDown-Year10" class='actDivs'>
+							
+							<div id='TimeSpent-DropDown-Year10-Line1'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line1' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line1" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year10-Line2'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line2' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line2" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year10-Line3'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line3' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line3" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year10-Line4'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line4' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line4" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year10-Line5'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line5' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line5" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year10-Line6'>
+								<form id='TimeSpent-DropDown-Form-Year10-Line6' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line6" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id='Activity-TimeSpent-Year11' style='display:inline-block'>
+						<div id="TimeSpent-Years-11" class='actDivs'>
+							<h4>11th</h4>
+							
+							<input type='checkbox' id='TimeSpent-Years-11Line1' style='margin-top:0px'></br>
+							<input type='checkbox' id='TimeSpent-Years-11Line2' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-11Line3' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-11Line4' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-11Line5' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-11Line6' class='TimeSpent-Years-CheckBoxes'>
+						</div>
+						<div id="TimeSpent-Text-Year9" class='actDivs'>
+							
+							<input type='text' id="TimeSpent-Text-Year11-Line1" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year11-Line2" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year11-Line3" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year11-Line4" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year11-Line5" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year11-Line6" style='margin-top:4px; width:40px; height:20px'>
+						</div>
+						<div id="TimeSpent-DropDown-Year11" class='actDivs'>
+							
+							<div id='TimeSpent-DropDown-Year11-Line1'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line1' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year11-Line1" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year11-Line2'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line2' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year11-Line2" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year11-Line3'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line3' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year11-Line3"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year11-Line4'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line4' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year10-Line4" class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year11-Line5'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line5' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year11-Line5"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year11-Line6'>
+								<form id='TimeSpent-DropDown-Form-Year11-Line6' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year11-Line6"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id='Activity-TimeSpent-Year12' style='display:inline-block'>
+						<div id="TimeSpent-Years-12" class='actDivs'>
+							<h4>12th</h4>
+							
+							<input type='checkbox' id='TimeSpent-Years-12Line1' style='margin-top:0px'></br>
+							<input type='checkbox' id='TimeSpent-Years-12Line2' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-12Line3' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-12Line4' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-12Line5' class='TimeSpent-Years-CheckBoxes'></br>
+							<input type='checkbox' id='TimeSpent-Years-12Line6' class='TimeSpent-Years-CheckBoxes'>
+						</div>
+						<div id="TimeSpent-Text-Year9" class='actDivs'>
+							
+							<input type='text' id="TimeSpent-Text-Year12-Line1" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year12-Line2" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year12-Line3" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year12-Line4" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year12-Line5" style='margin-top:4px; width:40px; height:20px'><br/>
+							<input type='text' id="TimeSpent-Text-Year12-Line6" style='margin-top:4px; width:40px; height:20px'>
+						</div>
+						<div id="TimeSpent-DropDown-Year12" class='actDivs'>
+							
+							<div id='TimeSpent-DropDown-Year12-Line1'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line1' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line1"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year12-Line2'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line2' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line2"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year12-Line3'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line3' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line3"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year12-Line4'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line4' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line4"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year12-Line5'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line5' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line5"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+							<div id='TimeSpent-DropDown-Year12-Line6'>
+								<form id='TimeSpent-DropDown-Form-Year12-Line6' style='margin-top:5px; width:125px'>
+									
+									<select id="TimeSpent-DropDown-Selecter-Year12-Line6"  class='ActSelectors'>
+										
+										<option value='Week'>Hours Per Week</option>
+										<option value='Month'>Hours Per Month</option>
+										<option value='Year'>Hours Per Year</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ActSponsorEmail" class='actDivs'>
+					<h3>Email</h3><br/><br/>
+					<input type='text' id='ActSponsorEmailLine1' class='actText'/><br/>
+					<input type='text' id='ActSponsorEmailLine2' class='actText'/><br/>
+					<input type='text' id='ActSponsorEmailLine3' class='actText'/><br/>
+					<input type='text' id='ActSponsorEmailLine4' class='actText'/><br/>
+					<input type='text' id='ActSponsorEmailLine5' class='actText'/><br/>
+					<input type='text' id='ActSponsorEmailLine6' class='actText'/><br/>
+				</div>
+			</div>
+		
+			<div class="AwardsDiv" align='center'>
+				<h1 class="Sub-titles">Awards</h1>
+				
+				<div id="Awards-Name" class="AwardsDivs">
+					<h3 align="left">Name & Description</h3><br/>
+					<label for="Awards-Name-Line1" class="AwardLabels">1:</label>
+						<input type='text' id="Awards-Name-Line1" style="height:20px"/><br/>
+						
+					<label for="Awards-Name-Line2" class="AwardLabels">2:</label>
+						<input type='text' id="Awards-Name-Line2" style="height:20px"/><br/>
+						
+					<label for="Awards-Name-Line3" class="AwardLabels">3:</label>
+						<input type='text' id="Awards-Name-Line3" style="height:20px"/><br/>
+						
+					<label for="Awards-Name-Line4" class="AwardLabels">4:</label>
+						<input type='text' id="Awards-Name-Line4" style="height:20px"/><br/>
+						
+					<label for="Awards-Name-Line5" class="AwardLabels">5:</label>
+						<input type='text' id="Awards-Name-Line5" style="height:20px"/>
+				</div>
+				<div id="Awards-Years" class="AwardsDivs">
+					<h3>Year</h3><br/>
+					
+					<form id="Awards-Form-Line1" class="Awards-Forms">
+						
+						<select id="Awards-Selector-Line1">
+							
+							<option value="9th Grade">9th Grade</option>
+							<option value="10th Grade">10th Grade</option>
+							<option value="11th Grade">11th Grade</option>
+							<option value="12th Grade">12th Grade</option>
+						</select>
+					</form>
+					<form id="Awards-Form-Line2" class="Awards-Forms">
+						
+						<select id="Awards-Selector-Line2">
+							
+							<option value="9th Grade">9th Grade</option>
+							<option value="10th Grade">10th Grade</option>
+							<option value="11th Grade">11th Grade</option>
+							<option value="12th Grade">12th Grade</option>
+						</select>
+					</form>
+					<form id="Awards-Form-Line3" class="Awards-Forms">
+						
+						<select id="Awards-Selector-Line3">
+							
+							<option value="9th Grade">9th Grade</option>
+							<option value="10th Grade">10th Grade</option>
+							<option value="11th Grade">11th Grade</option>
+							<option value="12th Grade">12th Grade</option>
+						</select>
+					</form>
+					<form id="Awards-Form-Line4" class="Awards-Forms">
+						
+						<select id="Awards-Selector-Line4">
+							
+							<option value="9th Grade">9th Grade</option>
+							<option value="10th Grade">10th Grade</option>
+							<option value="11th Grade">11th Grade</option>
+							<option value="12th Grade">12th Grade</option>
+						</select>
+					</form>
+					<form id="Awards-Form-Line5" class="Awards-Forms">
+						
+						<select id="Awards-Selector-Line5">
+							
+							<option value="9th Grade">9th Grade</option>
+							<option value="10th Grade">10th Grade</option>
+							<option value="11th Grade">11th Grade</option>
+							<option value="12th Grade">12th Grade</option>
+						</select>
+					</form>
+					
+				</div>
+				<div id="Awards-Email" class="AwardsDivs">
+					<h3>Email</h3><br/>
+					
+					<input type="text" id="Awards-Email-Line1" class="AwardsText"/><br/>
+					<input type="text" id="Awards-Email-Line2" class="AwardsText"/><br/>
+					<input type="text" id="Awards-Email-Line3" class="AwardsText"/><br/>
+					<input type="text" id="Awards-Email-Line4" class="AwardsText"/><br/>
+					<input type="text" id="Awards-Email-Line5" class="AwardsText"/>
+					
+				</div>
+			</div>
+			
+		
+		
+			<br/><br/><label for="Mail">Mailing Address:</label>
+			<input type='text' id='Mail' name='Mail' style="width: 800px"/>
+
+			<!--Add a button for the user to click to initiate auth sequence -->
+			<button id="authorize-button" style="visibility:visable">Authorize</button>
+		
+			
+			<div align="right">
+			<button onclick="clickHandler()">Enter
+			</button>
+			</div>
+		</div>
+	</center>
+	
+</body>
+</html>

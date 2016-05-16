@@ -1,0 +1,88 @@
+form{
+	margin-top:1px;
+	height:8px;
+	width:125px;
+}
+
+
+
+.formInput
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:1px solid black;
+   border-radius:3px;
+   padding:5px;
+}
+#viewPass
+{
+	border:1px solid black;
+	width:20px;
+	height:20px;
+}
+#doLogin
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:250px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#E6E6E6;
+   background-color:grey;
+   font-size:20px;
+}
+#Registerform
+{
+	width:500px;
+	height:330px;
+	margin-top:100px;
+	background-color:#585858;
+	border-radius:3px;
+	box-shadow:0px 0px 10px 0px #424242;
+	padding:10px;
+	box-sizing:border-box;
+	font-family:helvetica;
+	visibility:hidden;
+	display:none;
+}
+
+#LoginForm
+{
+	width:500px;
+	height:330px;
+	margin-top:100px;
+	background-color:#585858;
+	border-radius:3px;
+	box-shadow:0px 0px 10px 0px #424242;
+	padding:10px;
+	box-sizing:border-box;
+	font-family:helvetica;
+	visibility:hidden;
+	display:none;
+}
+#LoginAndRegisterForm
+{
+   width:500px;
+   height:330px;
+   margin-top:100px;
+   background-color:#585858;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   font-family:helvetica;
+}
+#dosignUp
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:250px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#E6E6E6;
+   background-color:grey;
+   font-size:20px;
+}
